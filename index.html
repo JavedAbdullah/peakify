@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+    <title>Peakify</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type = "text/javascript" src="peakifyJS/script.js"></script>  
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <span><img id="myImage" src="peakylogo.png" alt="" width="200" height="200" /></span>
+
+            <header>
+              <div class="container">
+                <h1 align="left">Search Artist</h1>
+                <form action="" id='formArtist' autocomplete="off">
+                  <input type="text" id='Artistsearch' placeholder="Enter artist name...">
+                </form>
+              </div>
+            </header>
+            <header>
+              <div class="container">
+                <h1 align="left">Search Song</h1>
+                <form action="" id='formSong' autocomplete="off">
+                  <input type="text" id='Songsearch' placeholder="Enter song name...">
+                  <br>
+                  <input type = "button" onclick = "getSongInfo(document.getElementById('Songsearch').value,document.getElementById('Artistsearch').value)" value = "Search">  
+                
+                </form>
+              </div>
+            </header>
+
+            <hr>
+
+            <!-- infoSong -->
+            <table>
+              <tr>
+                <td><h1 align="left" id="trackName"></h1></td>
+                <td><h1 align="right" id="artistNameInfo"></h1></td>
+              </tr>
+              <tr>
+                <td><h1 align="left" id="albumName"></h1></td>
+                <td><h1 align="right" id="artistBirthday"></h1></td>
+              </tr>
+              <tr>
+                <td><h1 align="left" id="artistName"></h1></td>
+                <td><h1 align="right" id="artistBirthplace"></h1></td>
+              </tr>
+              <tr>
+                <td><h1 align="left" id="genreName"></h1></td>
+                <td><h1 align="right" id="artistResidence"></h1></td>
+              </tr>
+              <tr>
+                <td><h1 align="left"></h1></td>
+                <td><h1 align="right" id="artistExtraInfo"></h1></td>
+              </tr>
+            </table>
+ 
+                <iframe width="0" height="0" id = "YTVid" src="" frameborder="0" allowfullscreen></iframe>
+
+            <div align="center">
+                <input type="button" onclick="window.open(getYoutube(document.getElementById('Songsearch').value,document.getElementById('Artistsearch').value))" id="YTRedirect" style="display: none; align-self: center;" value="redirect to youtube">
+            </div>
+
+            <hr>
+   
+            <p id="lyrics" align="center" style="font-weight: bold; color: white;"></p>
+
+            <ul class="icons">
+                <li><a href="#" class="icon style2 fa-github"><span class="label"></span></a></li>
+            </ul>
+
+        </header>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>&copy; Tutti i diritti riservati ai Peaky Blinders.</p>
+        </footer>
+
+</body>
+</html>
